@@ -82,6 +82,13 @@ typedef map<llint, llint> mll;
 const int max_states = 50;
 
 /* ADJACENCY LIST */
+/*
+**Made for dfs
+**To find unreachable states
+**If vis[state] = 0, it is unreachable
+**Treat machine as graph and run dfs 
+*/
+
 vector<pair<int, char>> adj[max_states];
 
 int vis[max_states];
@@ -102,6 +109,12 @@ void dfs(int root)
     }
 }
 
+/*
+** Backtracking
+** Used to reduce the complexity of the problem to N^2
+** When we find result for a pair, we mark all the other dependant pairs by backtracking
+** This result shows that the pair is not possible (cannot be merged)
+*/
 void backtract(int state1, int state2)
 {
     for (auto x : dp[{state1, state2}])
@@ -591,3 +604,5 @@ int main()
     cout << "\n\n\n\n";
     return 0;
 }
+
+/*------------------CODE ENDS HERE---------------------*/
