@@ -10,6 +10,7 @@ and the corresponding minimum state transition table.*/
 
 /*Following is written in C++*/
 /*Submission by : Tiya Bansal- LIT2020027*/
+/*Prof: Soumendu Chakroboty*/
 
 #include <bits/stdc++.h>
 using namespace std;
